@@ -1,0 +1,56 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+ponderada2.zip
+
+/Include
+/Lib
+/Scripts
+/ponderada2/backend/__pycache__
+/ponderada2/backend/app/__pycache__
+/ponderada2/backend/app/auth/__pycache__
+/ponderada2/backend/Include
+/ponderada2/backend/Lib
+/ponderada2/backend/Scripts
+
+ponderada2/backend/pyvenv.cfg
+
+/ponderada2/src/__pycache__
+/ponderada2/src/Include
+/ponderada2/src/Lib
+/ponderada2/src/Scripts
+
+/ponderada2/venv
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

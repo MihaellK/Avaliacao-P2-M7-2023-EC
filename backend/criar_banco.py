@@ -3,7 +3,7 @@ import psycopg2
 # Constantes
 DB_USER = "postgres"
 DB_PASSWORD = "admin123"
-DB_HOST = "database-aval-p2.c65qfraymric.us-east-1.rds.amazonaws.com"
+DB_HOST = "database-ec09.c65qfraymric.us-east-1.rds.amazonaws.com"
 DB_PORT = "5432"
 DB_NAME = "postgres"
 
@@ -20,7 +20,8 @@ con = psycopg2.connect(
 cur = con.cursor()
 
 # Roda o comando SQL
-cur.execute(
+try:
+    cur.execute(
     """DROP TABLE IF EXISTS minhas_notas ;
 
     CREATE TABLE minhas_notas (
@@ -29,7 +30,11 @@ cur.execute(
         descricao TEXT NOT null,
         data_criacao TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
     );"""
-)
+    )
+    print("criou")
+except:
+    print("erro")
+
 
 # Fecha a conexão
 con.close()
